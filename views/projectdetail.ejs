@@ -1,0 +1,75 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/contactt"><i class="fa fa-phone-square" aria-hidden="true"></i> Contact</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/addproject"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/users/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form action="search/keyword" method="GET" class="form-inline my-2 my-lg-0">
+        <label for="keyword"></label>
+        <input name="keyword" class="form-control mr-sm-2" id="keyword" type="text" placeholder="Search user name"
+          aria-label="Search">
+        <button class="btn btn-success my-2 my-sm-0" type="submit">
+          Search <i class="fa fa-search" aria-hidden="true"></i></button>
+      </form>
+      
+    </div>
+    <div><i class="fa fa-hand-peace-o" aria-hidden="true"></i> Hello, <%= user.name%></div>
+  </nav>
+<table class="table">
+    <thead class="thead-dark ">
+      <tr >
+        <div style="text-align: center;">
+          <th scope="col">Name</th>
+        <th scope="col">StudentID</th>
+        <th scope="col">StudentYear</th>
+        <th scope="col">Course</th>
+        <th scope="col">CourseID</th>
+        <th scope="col">Semester</th>
+        <th scope="col">Assignment</th>
+        <th scope="col">Description</th>
+        <th scope="col">Percentage</th>
+        <th scope="col">Technology</th>
+        <th scope="col">Company</th>
+        </div>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.studentid %></td>
+        <td><%= user.studentyear %></td>
+        <td><%= user.course %></td>
+        <td><%= user.courseid %></td>
+        <td><%= user.semester %></td>
+        <td><%= user.assignment %></td>
+        <td><%= user.description %></td>
+        <td><%= user.percentage %></td>
+        <td><%= user.technologyuse %></td>
+        <td><%= user.company %></td>
+
+      </tr>
+
+    </tbody>
+    
+  </table>
+  <a href="/edits/<%= user.id%> "  class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
+  <a href="/delete/<%= user.id%> "  class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>

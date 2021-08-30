@@ -1,0 +1,83 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/contactt"><i class="fa fa-phone-square" aria-hidden="true"></i> Contact</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/addproject"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/users/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form action="search/keyword" method="GET" class="form-inline my-2 my-lg-0">
+        <label for="keyword"></label>
+        <input name="keyword" class="form-control mr-sm-2" id="keyword" type="text" placeholder="Search user name"
+          aria-label="Search">
+        <button class="btn btn-success my-2 my-sm-0" type="submit">
+          Search <i class="fa fa-search" aria-hidden="true"></i></button>
+      </form>
+
+    </div>
+    <div><i class="fa fa-hand-peace-o" aria-hidden="true"></i> Hello, <%= user.name%></div>
+  </nav>
+
+  <div class="contact">
+    <div class="area-heading text-center" style="font-family: 'Gelasio', serif; font-weight: bolder;
+     font-size: 50px;">Contact us</div>
+    <br></br>
+    <div class="row" style="font-size: 16px;">
+      <div class="col 6">
+        <h4 style="font-size: 20px; font-weight: bolder;"><i class="fa fa-map-marker small-icon" aria-hidden="true"></i>
+          Location</h1>
+          <div class="text-contact">- 702 Nguyen Van Linh Blvd, District 7, Ho Chi Minh City</div>
+          <div class="text-contact">- Handi Resco Building, 521 Kim Ma, Ba Dinh District, Hanoi</div>
+          <br></br>
+
+          <div class="row">
+            <div class="col">
+              <h4 style="font-size: 20px; font-weight: bolder;"><i class="fa fa-phone-square small-icon"
+                  aria-hidden="true"></i> Hotline</h1>
+                <div class="text-contact">1900 3838</div>
+                <div class="text-contact">(+84) 28 3776 1369</div>
+                <div class="text-contact">(+84) 24 3726 1460</div>
+            </div>
+            <div class="col">
+              <h4 style="font-size: 20px; font-weight: bolder;"><i class="fa fa-envelope-o small-icon"
+                  aria-hidden="true"></i> E-mail</h1>
+                <div class="text-contact">s3741280@rmit.edu.vn</div>
+                <div class="text-contact">s3741280@rmit.edu.au</div>
+                <div class="text-contact">s3741280@rmit.edu.us</div>
+            </div>
+          </div>
+          <br></br>
+          <h4 style="font-size: 20px; font-weight: bolder;"><i class="fa fa-globe small-icon" aria-hidden="true"></i>
+            Social Media</h1>
+            <button class="btn"><a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-2x"
+                  aria-hidden="true"></i></a></button>
+            <button class="btn"><a href="https://twitter.com"><i class="fa fa-twitter-square fa-2x"
+                  aria-hidden="true"></i></a></button>
+            <button class="btn"><a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x"
+                  aria-hidden="true"></i></a></button>
+
+      </div>
+      <div class="col 6">
+        <img
+          src="https://www.rmit.edu.vn/content/dam/rmit/vn/en/assets-for-production/images/rmit-sgs-campus-facilities/2015-campus-photos/rmit-sgs-b2-14.jpg"
+          alt="rmit-picture" style="width: 500px; height: auto;">
+      </div>
+    </div>
+  </div>
+</div>

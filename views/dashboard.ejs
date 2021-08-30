@@ -1,0 +1,56 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/contactt"><i class="fa fa-phone-square" aria-hidden="true"></i> Contact</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/addproject"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/users/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form action="search/keyword" method="GET" class="form-inline my-2 my-lg-0">
+        <label for="keyword"></label>
+        <input name="keyword" class="form-control mr-sm-2" id="keyword" type="text" placeholder="Search user name"
+          aria-label="Search">
+        <button class="btn btn-success my-2 my-sm-0" type="submit">
+          Search <i class="fa fa-search" aria-hidden="true"></i></button>
+      </form>
+      
+    </div>
+    <div><i class="fa fa-hand-peace-o" aria-hidden="true"></i> Hello, <%= user.name%></div>
+  </nav>
+  
+  <div class="container">
+    <div style="font-family: 'Gelasio', serif; font-weight: bolder; text-align: center; font-size: 40px;">Students' Project</div>
+   <br></br>
+    <% users.forEach(function (user) {%>
+      <div class="col-md-4">
+        <div class="card" style="width: 28rem; height: 20rem; margin-bottom: 20px; font-family: 'Gelasio', serif;">
+          <div class="card-body">
+            <h5 class="card-title text-center" style="font-weight: bolder; font-size: 20px;"><%= user.name %></h5>
+            <p class="card-text"><%= user.assignment   %></p>
+            <p class="card-text"><%= user.course  %></p>
+            <a href="/detail/<%= user.id%> " class="btn btn-danger">Detail</a>
+          </div>
+        </div>
+      </div>
+      <%}) %>
+  
+  </div>
+  
+</div>
+

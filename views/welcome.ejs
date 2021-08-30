@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/"><i class="fa fa-university" aria-hidden="true"></i> Welcome</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="/contact"><i class="fa fa-phone-square" aria-hidden="true"></i> Contact</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="/users/register"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="/users/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Log in</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div><i class="fa fa-hand-peace-o" aria-hidden="true"></i> Welcome to our project</div>
+</nav>
+
+
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body text-center">
+      <img src="<%= typeof file != 'undefined' ? file : '' %>" alt="cover-photo-here" class="responsive-img"
+        style="width: 510px; height: 500px;">
+      <p style="color:rgb(214, 16, 16); font-size: 20px; font-weight: bolder;">Create an account or login to manage
+        the project</p>
+      <a href="/users/register" class="btn btn-primary btn-block mb-2" style="font-size: 20px;">
+        <i class="fa fa-user-plus" aria-hidden="true"></i> Register</a>
+      <a href="/users/login" class="btn btn-success btn-block" style="font-size: 20px;">
+        <i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+
+    </div>
+    <div class="container">
+      <h1>Upload and change cover photo here</h1>
+      <%= typeof msg != 'undefined' ? msg : '' %>
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <div class="file-field input-field">
+          <div class="btn grey" style="width: 500px;">
+            <input name="myImage" type="file">
+          </div>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </form>
+      <br>
+    </div>
+  </div>
